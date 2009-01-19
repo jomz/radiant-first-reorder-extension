@@ -4,7 +4,7 @@ class ReorderExtension < Radiant::Extension
   url "http://dev.radiantcms.org/svn/radiant/branches/mental/extensions/reorder"
 
   define_routes do |map|
-    map.page_reorder_children  'admin/pages/reorder/:id', :controller => 'admin/page', :action => 'reorder'
+    map.page_reorder_children  'admin/pages/reorder/:id', :controller => 'admin/pages', :action => 'reorder'
   end
   
   def activate

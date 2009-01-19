@@ -56,6 +56,6 @@ Sortable.create("children", { onUpdate:function(){ $('sort_order').value = Sorta
 </script>
 <% @javascripts << 'dragdrop' %>
 <% form_tag do %>
-  <p class="buttons"><%= submit_tag "Finished", :class => 'button' %> or <%= link_to 'Cancel', page_index_url %></p>
+  <p class="buttons"><%= submit_tag "Finished", :class => 'button' %> or <%= link_to 'Cancel', admin_pages_url %></p>
   <div><%= hidden_field_tag "sort_order" %></div>
 <% end %>

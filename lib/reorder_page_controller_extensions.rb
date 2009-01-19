@@ -5,7 +5,7 @@ module ReorderPageControllerExtensions
       sort_order.each_with_index do |id, index|
         Page.update(id, :position => index)
       end
-      redirect_to page_index_url
+      redirect_to admin_pages_url
     else
       @page = Page.find(params[:id])
       @children = @page.children
