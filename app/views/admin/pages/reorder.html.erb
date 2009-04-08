@@ -45,7 +45,7 @@ ul.pages .icon {
 
 <ul id="children" class="pages">
 <% for child in @children -%>
-  <li id="item_<%= child.id %>" class="page"><%= page_icon(child) %> <%= child.title %></li>
+  <li id="item_<%= child.id %>" class="page"><%= page_icon(child) %> <%= child.breadcrumb %></li>
 <% end -%>
 </ul>
 
