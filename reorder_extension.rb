@@ -26,7 +26,7 @@ class ReorderExtension < Radiant::Extension
       end
     end
     
-    require_dependency 'application'
+    require_dependency 'application_controller'
     Admin::PagesController.send :include, ReorderPageControllerExtensions
     Admin::PagesController.send :helper, ReorderPageHelperExtensions
   end
