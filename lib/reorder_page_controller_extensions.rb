@@ -5,6 +5,13 @@ module ReorderPageControllerExtensions
       sort_order.each_with_index do |id, index|
         Page.update(id, :position => index)
       end
+      
+      if defined? ResponseCache == 'constant'
+        ResponseCache.instance.clear
+      else
+        Radiant::Cache.clear
+      end
+      
       redirect_to admin_pages_url
     else
       @page = Page.find(params[:id])
