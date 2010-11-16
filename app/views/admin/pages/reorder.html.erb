@@ -54,7 +54,7 @@ ul.pages .icon {
 Sortable.create("children", { onUpdate:function(){ $('sort_order').value = Sortable.sequence('children').join(',') } });
 //]]>
 </script>
-<% @javascripts << 'dragdrop' %>
+<% @javascripts << 'admin/dragdrop' %>
 <% form_tag do %>
   <p class="buttons"><%= submit_tag "Finished", :class => 'button' %> or <%= link_to 'Cancel', admin_pages_url %></p>
   <div><%= hidden_field_tag "sort_order" %></div>
