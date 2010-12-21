@@ -1,3 +1,4 @@
 %td.reorder
-  - unless simple || !(Page === page) || page.children.length < 1
+  - unless simple || page.respond_to?(:stop_recurring) || page.respond_to?(:tree_children) || page.children.empty?
     = link_to image('reorder', :alt => 'Reorder'), page_reorder_children_url(:id => page)
+  
