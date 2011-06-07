@@ -12,6 +12,7 @@ class ReorderExtension < Radiant::Extension
     admin.page.index.add :sitemap_head, 'reorder_extra_th', :after => "modify_column_header"
     admin.page.index.add :node, 'reorder_extra_td', :after => "add_child_column"
     
+    Page.send :include, ReorderPageExtensions, ReorderTagExtensions
     Page.reflections[:children].options[:order] = "position ASC"
     
     StandardTags.class_eval do
